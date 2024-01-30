@@ -7,7 +7,7 @@
 			name="description"
 			content="Expert eye care and a wide selection of stylish frames await at our optical salon. Experience personalized service for perfect vision and comfort." />
 		<meta name="author" content="Shreddin" />
-		<meta name="keywords" content="optic, optician, eyewear, frames" />
+		<meta name="keywords" content="optics, optician, eyewear, frames" />
 		<link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
 		<title>Blind Optics | Your Vision, Our Passion</title>
 		<link rel="stylesheet" href="./css/style.css" />
@@ -15,46 +15,50 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="info-bar">
-				<h2>Selected frames, eyeglasses lenses, and contact lenses available at up to 40% off!</h2>
+			<div class="header__info-bar">
+				<h2 class="info-bar__heading">
+					Selected frames, eyeglasses lenses, and contact lenses available at up to 40% off!
+				</h2>
 			</div>
 
-		<div class="cont">
-            <div class="logo-container">
-                <p>Blind Optics</p>
-                <a href="#">
-                    <img src="./img/logo.png" alt="blind optics logo" width="80px" />
-                </a>
-            </div>
-            
-            <nav class="nav">
-                <div class="nav-items" id="navigation-items">
-                    <a href="#">eyeglasses</a>
-                    <a href="#">sunglasses</a>
-                    <a href="#">contact lenses</a>
-                </div>
+			<div class="header__items">
+				<div class="logo-container">
+					<a href="#">
+						<img src="./img/logo.png" alt="blind optics logo" width="80px" />
+					</a>
+				</div>
 
-                <div class="nav-actions">
-                
-                    <button class="my-account"><ion-icon name="person-outline"></ion-icon></button>
-                    <button class="add-to-favs"><ion-icon name="heart-outline"></ion-icon></button>
-                    <button class="my-cart"><ion-icon name="cart-outline"></ion-icon></button>
-                </div>
-            </nav>
+				<nav class="nav">
+					<div class="nav__items" id="navigation-items">
+						<a href="#" class="nav__item">eyeglasses</a>
+						<a href="#" class="nav__item">sunglasses</a>
+						<a href="#" class="nav__item">contact lenses</a>
+					</div>
 
-           
+					<div class="nav__actions">
+						<button class="nav__action my-account">
+							<ion-icon name="person-outline"></ion-icon>
+						</button>
+						<button class="nav__action add-to-favs">
+							<ion-icon name="heart-outline"></ion-icon>
+						</button>
+						<button class="nav__action my-cart">
+							<ion-icon name="cart-outline"></ion-icon>
+						</button>
+					</div>
+				</nav>
 
-          <div class="containe">
-            <button class="search"><ion-icon name="search-outline"></ion-icon></button>
-            <button class="hamburger hamburger--spin" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-          </div>
-
-        </div>
-	
+				<div class="hamburger-search-container">
+					<button class="search-btn">
+						<ion-icon name="search-outline"></ion-icon>
+					</button>
+					<button class="hamburger hamburger--spin" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+			</div>
 		</header>
 
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

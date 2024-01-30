@@ -1,8 +1,12 @@
-:root {
-	// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@100;300;400;700&display=swap');
 
-	// COLORS
-	--primary: #4e64ff;
-	--secondary: #01d5c4;
-	--third: #fff;
-}
+// FONTS
+$heading-font: 'Montserrat', sans-serif;
+$text-font: 'Poppins', sans-serif;
+
+// COLORS
+$primary: #4e64ff;
+$hover-color: #485ae6;
+$secondary: #01d5c4;
+$black: #0d1717;
+$white: #f0f8ff;
