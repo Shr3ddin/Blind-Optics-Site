@@ -1,3 +1,5 @@
+@use '../variables/variables' as *;
+
 .header {
 	position: fixed;
 	top: 0;
@@ -20,6 +22,7 @@
 	}
 
 	&__items {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -37,20 +40,51 @@
 			}
 		}
 
-		.hamburger-search-container {
-			.search-btn {
-				padding: 0.8rem;
-				border: none;
-				background: none;
-				font-size: 1.7rem;
-				cursor: pointer;
-				transition: transfrom 500ms;
+		.search-btn {
+			position: absolute;
+			right: 85px;
+			padding: 0.8rem;
+			border: none;
+			background: none;
+			font-size: 1.7rem;
+			cursor: pointer;
+			transition: transfrom 500ms;
 
-				&:hover,
-				&:focus {
-					transform: scale(1.09);
-				}
+			&:hover,
+			&:focus {
+				transform: scale(1.09);
 			}
+		}
+	}
+
+	.search-form {
+		position: absolute;
+		top: -60%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 90%;
+		visibility: hidden;
+		font-size: 1rem;
+		z-index: 1;
+		transition: 500ms ease;
+
+		&--active {
+			visibility: visible;
+			transform: translateY(300%) translateX(-50%);
+		}
+
+		&__input {
+			width: 100%;
+			padding: 1rem 0.5rem;
+			border: 1px solid $light-grey;
+			border-radius: 6px;
+		}
+
+		&__btn {
+			position: absolute;
+			right: 30px;
+			top: 15%;
+			font-size: 1.7rem;
 		}
 	}
 }

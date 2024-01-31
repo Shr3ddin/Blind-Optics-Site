@@ -48,17 +48,21 @@
 					</div>
 				</nav>
 
-				<div class="hamburger-search-container">
-					<button class="search-btn">
-						<ion-icon name="search-outline"></ion-icon>
-					</button>
-					<button class="hamburger hamburger--spin" type="button">
-						<span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-						</span>
-					</button>
-				</div>
+				<button class="search-btn">
+					<ion-icon name="search-outline"></ion-icon>
+				</button>
+
+				<button class="hamburger hamburger--spin" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
 			</div>
+
+			<form class="search-form">
+				<input type="search" id="search-box" placeholder="Search here..." class="search-form__input" />
+				<label for="search-box" class="search-form__btn"><ion-icon name="search-outline"></ion-icon></label>
+			</form>
 		</header>
 
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

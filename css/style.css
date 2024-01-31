@@ -40,6 +40,7 @@ li {
   font-size: 1rem;
 }
 .header__items {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,7 +56,9 @@ li {
   display: none;
   margin: 0;
 }
-.header__items .hamburger-search-container .search-btn {
+.header__items .search-btn {
+  position: absolute;
+  right: 85px;
   padding: 0.8rem;
   border: none;
   background: none;
@@ -63,8 +66,35 @@ li {
   cursor: pointer;
   transition: transfrom 500ms;
 }
-.header__items .hamburger-search-container .search-btn:hover, .header__items .hamburger-search-container .search-btn:focus {
+.header__items .search-btn:hover, .header__items .search-btn:focus {
   transform: scale(1.09);
+}
+.header .search-form {
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  visibility: hidden;
+  font-size: 1rem;
+  z-index: 1;
+  transition: 500ms ease;
+}
+.header .search-form--active {
+  visibility: visible;
+  transform: translateY(300%) translateX(-50%);
+}
+.header .search-form__input {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border: 1px solid #c5c5c5;
+  border-radius: 6px;
+}
+.header .search-form__btn {
+  position: absolute;
+  right: 30px;
+  top: 15%;
+  font-size: 1.7rem;
 }
 
 .nav {
