@@ -29,7 +29,7 @@ li {
   left: 0;
   width: 100%;
   padding-block: 1rem;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.4);
   border-block-end: 1px solid transparent;
   z-index: 2;
 }
@@ -47,14 +47,10 @@ li {
   width: 100%;
   padding-inline: 1rem;
 }
-.header__items .logo-container {
+.header__items__logo-container {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-}
-.header__items .logo-container p {
-  display: none;
-  margin: 0;
 }
 .header__items .search-btn {
   position: absolute;
@@ -86,7 +82,7 @@ li {
 }
 .header .search-form--active {
   visibility: visible;
-  transform: translateY(300%) translateX(-50%);
+  transform: translateY(350%) translateX(-50%);
 }
 .header .search-form__input {
   width: 100%;
@@ -274,6 +270,18 @@ li {
 .hero__item--active .hero__slider-bg {
   animation: smoothScale 7s linear forwards;
 }
+.hero__subtitle {
+  margin-block-end: 1.5rem;
+  color: #01d5c4;
+  font-weight: bold;
+}
+.hero__title {
+  margin-block-end: 1.5rem;
+  padding-inline: 0.5rem;
+}
+.hero__description {
+  padding-inline: 0.5rem;
+}
 
 @keyframes smoothScale {
   0% {
@@ -300,4 +308,15 @@ li {
   margin-inline: auto;
   max-width: 87.5rem;
   width: 100%;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: calc(1.6rem + 1.5vw);
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: calc(1rem + 1vw);
+  letter-spacing: 2px;
 }/*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@
 	position: relative;
 	padding-block: 95px;
 	min-height: 100vh;
-    color: $white;
+	color: $white;
 	overflow: hidden;
 	z-index: 1;
 
@@ -43,6 +43,21 @@
 
 	&__item--active &__slider-bg {
 		animation: smoothScale 7s linear forwards;
+	}
+
+	&__subtitle {
+		margin-block-end: 1.5rem;
+		color: $secondary;
+		font-weight: bold;
+	}
+
+	&__title {
+		margin-block-end: 1.5rem;
+		padding-inline: 0.5rem;
+	}
+
+	&__description {
+		padding-inline: 0.5rem;
 	}
 }
 

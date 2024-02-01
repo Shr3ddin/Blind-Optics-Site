@@ -1,3 +1,5 @@
+@use '../variables/variables' as *;
+
 .img {
 	object-fit: cover;
 	width: 100%;
@@ -13,4 +15,16 @@
 	margin-inline: auto;
 	max-width: 87.5rem;
 	width: 100%;
+}
+
+.section-title {
+    font-family: $heading-font;
+	font-size: $headline-1;
+    
+}
+
+.subtitle {
+    text-transform: uppercase;
+	font-size: $subtitle;
+    letter-spacing: $letter-spacing-2;
 }
