@@ -5,11 +5,11 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	// background-color: transparent;
-	padding-block: 0.8rem;
-	// border-block-end: 1px solid transparent;
-	border-block-end: 1px solid hsla(0, 0%, 0%, 0.15);
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	padding-block: 1rem;
+	background-color: transparent;
+	border-block-end: 1px solid transparent;
+	// border-block-end: 1px solid hsla(0, 0%, 0%, 0.15);
+	// box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 	z-index: 2;
 	// transition: var(--transition-1);
 
@@ -46,13 +46,18 @@
 			padding: 0.8rem;
 			border: none;
 			background: none;
-			font-size: 1.7rem;
+			font-size: 2rem;
 			cursor: pointer;
 			transition: transfrom 500ms;
 
 			&:hover,
 			&:focus {
 				transform: scale(1.09);
+			}
+
+			ion-icon {
+				color: $white;
+				font-weight: bold;
 			}
 		}
 	}

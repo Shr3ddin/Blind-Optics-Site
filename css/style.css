@@ -28,9 +28,9 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  padding-block: 0.8rem;
-  border-block-end: 1px solid hsla(0, 0%, 0%, 0.15);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding-block: 1rem;
+  background-color: transparent;
+  border-block-end: 1px solid transparent;
   z-index: 2;
 }
 .header__info-bar {
@@ -62,12 +62,16 @@ li {
   padding: 0.8rem;
   border: none;
   background: none;
-  font-size: 1.7rem;
+  font-size: 2rem;
   cursor: pointer;
   transition: transfrom 500ms;
 }
 .header__items .search-btn:hover, .header__items .search-btn:focus {
   transform: scale(1.09);
+}
+.header__items .search-btn ion-icon {
+  color: #f0f8ff;
+  font-weight: bold;
 }
 .header .search-form {
   position: absolute;
@@ -132,7 +136,6 @@ li {
   transition-duration: 0.15s;
   transition-timing-function: linear;
   font: inherit;
-  color: inherit;
   text-transform: none;
   background-color: transparent;
   border: 0;
@@ -151,7 +154,7 @@ li {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #000;
+  background-color: #f0f8ff;
 }
 
 .hamburger-box {
@@ -172,7 +175,7 @@ li {
 .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #000;
+  background-color: #f0f8ff;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -226,4 +229,75 @@ li {
   bottom: 0;
   transform: rotate(-90deg);
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hero {
+  position: relative;
+  padding-block: 95px;
+  min-height: 100vh;
+  color: #f0f8ff;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero__item {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding-block-start: 100px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1000ms ease;
+  z-index: 1;
+}
+.hero__item--active {
+  opacity: 1;
+  visibility: visible;
+}
+.hero__slider-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.15);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: -1;
+}
+.hero__item--active .hero__slider-bg {
+  animation: smoothScale 7s linear forwards;
+}
+
+@keyframes smoothScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+.img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.wrapper {
+  margin-inline: auto;
+  max-width: 87.5rem;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

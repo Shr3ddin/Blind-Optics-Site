@@ -1,0 +1,56 @@
+@use '../variables/variables' as *;
+
+.hero {
+	position: relative;
+	padding-block: 95px;
+	min-height: 100vh;
+    color: $white;
+	overflow: hidden;
+	z-index: 1;
+
+	&__item {
+		position: absolute;
+		display: grid;
+		place-content: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		padding-block-start: 100px;
+		opacity: 0;
+		visibility: hidden;
+		transition: 1000ms ease;
+		z-index: 1;
+	}
+
+	&__item--active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__slider-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: scale(1.15);
+		pointer-events: none;
+		user-select: none;
+		z-index: -1;
+	}
+
+	&__item--active &__slider-bg {
+		animation: smoothScale 7s linear forwards;
+	}
+}
+
+@keyframes smoothScale {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.15);
+	}
+}
