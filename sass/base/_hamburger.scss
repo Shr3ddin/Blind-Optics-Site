@@ -1,3 +1,5 @@
+@use '../variables/variables' as *;
+
 // hamburgen menu
 /*!
  * Hamburgers
@@ -6,7 +8,7 @@
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
- 
+
 .hamburger {
 	padding: 15px 15px;
 	display: inline-block;

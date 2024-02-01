@@ -7,6 +7,10 @@ const searchForm = document.querySelector('.search-form');
 const handleNav = () => {
 	nav.classList.toggle('nav--active');
 	burgerBtn.classList.toggle('is-active');
+
+	if (nav.classList.contains('nav--active')) {
+		searchForm.classList.remove('search-form--active');
+	}
 };
 
 const handleSearch = () => {
