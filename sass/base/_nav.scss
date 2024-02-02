@@ -1,13 +1,15 @@
+@use '../variables/variables' as *;
+
 .nav {
 	position: fixed;
-	top: 100px;
+	top: 105px;
 	bottom: 0;
 	left: -430px;
 	width: 100%;
 	max-width: 360px;
-	padding-inline: 30px;
-	padding-block-end: 50px;
-	background-color: red;
+	padding-inline: 35px;
+	padding-block: 20px;
+	background-color: $white-transparency;
 	overflow-y: auto;
 	visibility: hidden;
 	z-index: 2;
@@ -16,5 +18,63 @@
 	&--active {
 		visibility: visible;
 		transform: translateX(430px);
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		padding-block: 0.8rem;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		border-block-end: 1px solid hsla(0, 0%, 0%, 0.2);
+		transition: color 300ms ease;
+
+		&:is(:hover, :focus-visible) {
+			color: $primary;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+	&__item:last-child {
+		color: $primary;
+		font-weight: bold;
+		padding-block-end: 1rem;
+		border-block-end: none;
+		transition: transform 300ms ease;
+	}
+
+	&__item:last-child:is(:hover, :focus-visible) {
+		transform: translateX(20px);
+	}
+
+	&__actions {
+		display: flex;
+		flex-direction: column;
+		padding-block-start: 1rem;
+	}
+
+	&__action {
+		display: flex;
+		align-items: center;
+		padding-block: 0.6rem;
+		font-size: 0.8rem;
+		font-weight: bold;
+
+		&:is(:hover, :focus-visible) ion-icon {
+			color: $primary;
+			transform: scale(1.02);
+		}
+	}
+
+	&__action ion-icon {
+		padding-right: 0.5rem;
+		font-size: 2rem;
+		transition: transform 300ms ease, color 300ms ease;
 	}
 }
