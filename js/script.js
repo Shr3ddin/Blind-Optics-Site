@@ -37,11 +37,21 @@ const nextSlide = () => {
 	changeSlide();
 };
 
+const prevSlide = () => {
+	if (currensSlidePos <= 0) {
+		sliderItems.length - 1;
+	} else {
+		currensSlidePos--;
+	}
+};
+
 const autoChangeSlide = () => {
 	setInterval(() => {
 		nextSlide();
 	}, 7000);
 };
+
+console.log(sliderItems.length - 1);
 
 burgerBtn.addEventListener('click', handleNav);
 searchBtn.addEventListener('click', handleSearch);
