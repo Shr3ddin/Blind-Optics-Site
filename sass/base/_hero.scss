@@ -59,13 +59,13 @@
 	&__description {
 		padding-inline: 0.5rem;
 	}
-}
 
-@keyframes smoothScale {
-	0% {
-		transform: scale(1);
-	}
-	100% {
-		transform: scale(1.15);
+	@keyframes smoothScale {
+		0% {
+			transform: scale(1);
+		}
+		100% {
+			transform: scale(1.15);
+		}
 	}
 }

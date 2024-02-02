@@ -282,7 +282,6 @@ li {
 .hero__description {
   padding-inline: 0.5rem;
 }
-
 @keyframes smoothScale {
   0% {
     transform: scale(1);
@@ -291,6 +290,7 @@ li {
     transform: scale(1.15);
   }
 }
+
 .img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -319,4 +319,62 @@ li {
   text-transform: uppercase;
   font-size: calc(1rem + 1vw);
   letter-spacing: 2px;
+}
+
+.btn {
+  position: relative;
+  margin-block-start: 4rem;
+  margin-inline: auto;
+  padding: 0.5rem 1.5rem;
+  color: #01d5c4;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  border: 2px solid #01d5c4;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  background-color: #01d5c4;
+  transition: 500ms ease;
+  z-index: -1;
+}
+
+.btn .text {
+  transition: 300ms ease;
+}
+
+.btn .two {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: -moz-max-content;
+  min-width: max-content;
+  color: hsl(40, 12%, 5%);
+}
+
+.btn:is(:hover, :focus-visible)::before {
+  bottom: -50%;
+}
+
+.btn:is(:hover, :focus-visible) .one {
+  transform: translateY(-40px);
+}
+
+.btn:is(:hover, :focus-visible) .two {
+  top: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=style.css.map */

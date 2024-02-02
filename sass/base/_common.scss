@@ -28,3 +28,59 @@
 	font-size: $subtitle;
     letter-spacing: $letter-spacing-2;
 }
+
+.btn {
+    position: relative;
+    margin-block-start: 4rem;
+    margin-inline: auto;
+    padding: 0.5rem 1.5rem;
+    color: $secondary;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-2;
+    max-width: max-content;
+    border: 2px solid $secondary;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    position: absolute;
+    content: '';
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    background-color: $secondary;
+    transition: 500ms ease;
+    z-index: -1;
+}
+
+.btn .text {
+    transition: 300ms ease;
+}
+
+.btn .two {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: $smoky-black;
+}
+
+.btn:is(:hover, :focus-visible)::before {
+    bottom: -50%;
+}
+
+.btn:is(:hover, :focus-visible) .one {
+    transform: translateY(-40px);
+}
+
+.btn:is(:hover, :focus-visible) .two {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
