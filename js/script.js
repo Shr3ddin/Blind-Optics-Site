@@ -1,6 +1,9 @@
 const burgerBtn = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
 
+const navItemsWithDrop = document.querySelectorAll('.has-dropdown');
+const navDropdown = document.querySelector('.nav__dropdown');
+
 const searchBtn = document.querySelector('.search-btn');
 const searchForm = document.querySelector('.search-form');
 
@@ -17,6 +20,7 @@ const handleNav = () => {
 		searchForm.classList.remove('search-form--active');
 	}
 };
+
 
 const handleSearch = () => {
 	searchForm.classList.toggle('search-form--active');
@@ -51,8 +55,16 @@ const autoChangeSlide = () => {
 	}, 7000);
 };
 
-console.log(sliderItems.length - 1);
 
 burgerBtn.addEventListener('click', handleNav);
 searchBtn.addEventListener('click', handleSearch);
 window.addEventListener('load', autoChangeSlide);
+
+navItemsWithDrop.forEach(item => {
+    item.addEventListener('click', function() {
+        // Znajdź najbliższy element dropdown tego konkretnego klikniętego elementu
+        const dropdown = this.querySelector('.nav__dropdown');
+        // Toggle klasy, aby pokazać/ukryć dropdown
+        navDropdown.classList.toggle('nav__dropdown--active');
+    });
+});

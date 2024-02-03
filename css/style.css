@@ -121,6 +121,7 @@ li {
   flex-direction: column;
 }
 .nav__item {
+  position: relative;
   padding-block: 0.8rem;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -143,6 +144,13 @@ li {
 .nav__item:last-child:is(:hover, :focus-visible) {
   transform: translateX(20px);
 }
+.nav .has-dropdown ion-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
 .nav__actions {
   display: flex;
   flex-direction: column;
@@ -163,6 +171,23 @@ li {
   padding-right: 0.5rem;
   font-size: 2rem;
   transition: transform 300ms ease, color 300ms ease;
+}
+.nav__dropdown {
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms ease;
+}
+.nav__dropdown--active {
+  max-height: -moz-max-content;
+  max-height: max-content;
+  opacity: 1;
+  visibility: visible;
+}
+.nav__dropdown-item {
+  margin-block: 0.6rem;
+  padding-left: 0.3rem;
+  font-size: 0.8rem;
 }
 
 /*!
