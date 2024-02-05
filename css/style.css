@@ -173,21 +173,19 @@ li {
   transition: transform 300ms ease, color 300ms ease;
 }
 .nav__dropdown {
-  max-height: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: 300ms ease;
+  display: none;
 }
 .nav__dropdown--active {
-  max-height: -moz-max-content;
-  max-height: max-content;
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 .nav__dropdown-item {
   margin-block: 0.6rem;
   padding-left: 0.3rem;
   font-size: 0.8rem;
+  transition: color 300ms ease;
+}
+.nav__dropdown-item:is(:hover, :focus-visible) {
+  color: #4e64ff;
 }
 
 /*!

@@ -88,15 +88,17 @@
 	}
 
 	&__dropdown {
-		max-height: 0;
-		visibility: hidden;
-		opacity: 0;
-		transition: 300ms ease;
+		display: none;
+		// max-height: 0;
+		// visibility: hidden;
+		// opacity: 0;
+		// transition: 300ms ease;
 
 		&--active {
-			max-height: max-content;
-			opacity: 1;
-			visibility: visible;
+			display: block;
+			// max-height: max-content;
+			// opacity: 1;
+			// visibility: visible;
 		}
 	}
 
@@ -104,5 +106,10 @@
 		margin-block: .6rem;
 		padding-left: .3rem;
 		font-size: 0.8rem;
+		transition: color 300ms ease;
+
+		&:is(:hover, :focus-visible) {
+			color: $primary;
+		}
 	}
 }

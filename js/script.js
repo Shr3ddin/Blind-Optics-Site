@@ -21,7 +21,6 @@ const handleNav = () => {
 	}
 };
 
-
 const handleSearch = () => {
 	searchForm.classList.toggle('search-form--active');
 };
@@ -55,16 +54,20 @@ const autoChangeSlide = () => {
 	}, 7000);
 };
 
-
 burgerBtn.addEventListener('click', handleNav);
 searchBtn.addEventListener('click', handleSearch);
 window.addEventListener('load', autoChangeSlide);
 
 navItemsWithDrop.forEach(item => {
-    item.addEventListener('click', function() {
-        // Znajdź najbliższy element dropdown tego konkretnego klikniętego elementu
-        const dropdown = this.querySelector('.nav__dropdown');
-        // Toggle klasy, aby pokazać/ukryć dropdown
-        navDropdown.classList.toggle('nav__dropdown--active');
-    });
+	item.addEventListener('click', function () {
+		// e.preventDefault();
+
+		const dropdownMenu = this.nextElementSibling;
+		const ionIcon = this.querySelector('ion-icon[name="add-outline"], ion-icon[name="remove-outline"]');
+
+		dropdownMenu.classList.toggle('nav__dropdown--active');
+		dropdownMenu.classList.contains('nav__dropdown--active')
+			? ionIcon.setAttribute('name', 'remove-outline')
+			: ionIcon.setAttribute('name', 'add-outline');
+	});
 });
