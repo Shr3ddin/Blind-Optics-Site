@@ -44,6 +44,7 @@
 
 	&__item:last-child {
 		color: $primary;
+		font-size: 1rem;
 		font-weight: bold;
 		padding-block-end: 1rem;
 		border-block-end: none;
@@ -88,23 +89,24 @@
 	}
 
 	&__dropdown {
-		display: none;
-		// max-height: 0;
-		// visibility: hidden;
-		// opacity: 0;
-		// transition: 300ms ease;
+		// display: none;
+		max-height: 0;
+		visibility: hidden;
+		opacity: 0;
+		// overflow: hidden;
+		transition: opacity 300ms ease, max-height 300ms ease, visibility 300ms ease;
 
 		&--active {
-			display: block;
-			// max-height: max-content;
-			// opacity: 1;
-			// visibility: visible;
+			// display: block;
+			max-height: 500px;
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 
 	&__dropdown-item {
-		margin-block: .6rem;
-		padding-left: .3rem;
+		margin-block: 0.6rem;
+		padding-left: 0.3rem;
 		font-size: 0.8rem;
 		transition: color 300ms ease;
 

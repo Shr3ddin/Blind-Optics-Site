@@ -136,6 +136,7 @@ li {
 }
 .nav__item:last-child {
   color: #4e64ff;
+  font-size: 1rem;
   font-weight: bold;
   padding-block-end: 1rem;
   border-block-end: none;
@@ -173,10 +174,15 @@ li {
   transition: transform 300ms ease, color 300ms ease;
 }
 .nav__dropdown {
-  display: none;
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms ease, max-height 300ms ease, visibility 300ms ease;
 }
 .nav__dropdown--active {
-  display: block;
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
 }
 .nav__dropdown-item {
   margin-block: 0.6rem;

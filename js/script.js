@@ -23,6 +23,11 @@ const handleNav = () => {
 
 const handleSearch = () => {
 	searchForm.classList.toggle('search-form--active');
+
+	if (searchForm.classList.contains('search-form--active')) {
+		nav.classList.remove('nav--active');
+		burgerBtn.classList.remove('is-active');
+	}
 };
 
 const changeSlide = () => {
@@ -57,8 +62,6 @@ const autoChangeSlide = () => {
 burgerBtn.addEventListener('click', handleNav);
 searchBtn.addEventListener('click', handleSearch);
 window.addEventListener('load', autoChangeSlide);
-
-
 
 navItemsWithDrop.forEach(item => {
 	item.addEventListener('click', function () {
