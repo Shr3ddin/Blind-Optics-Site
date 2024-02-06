@@ -58,14 +58,24 @@ burgerBtn.addEventListener('click', handleNav);
 searchBtn.addEventListener('click', handleSearch);
 window.addEventListener('load', autoChangeSlide);
 
+
+
 navItemsWithDrop.forEach(item => {
 	item.addEventListener('click', function () {
-		// e.preventDefault();
-
+		const activeDropdown = document.querySelector('.nav__dropdown--active');
 		const dropdownMenu = this.nextElementSibling;
 		const ionIcon = this.querySelector('ion-icon[name="add-outline"], ion-icon[name="remove-outline"]');
 
+		if (activeDropdown && activeDropdown !== dropdownMenu) {
+			activeDropdown.classList.remove('nav__dropdown--active');
+			const activeIcon = activeDropdown.previousElementSibling.querySelector('ion-icon[name="remove-outline"]');
+			if (activeIcon) {
+				activeIcon.setAttribute('name', 'add-outline');
+			}
+		}
+
 		dropdownMenu.classList.toggle('nav__dropdown--active');
+
 		dropdownMenu.classList.contains('nav__dropdown--active')
 			? ionIcon.setAttribute('name', 'remove-outline')
 			: ionIcon.setAttribute('name', 'add-outline');
