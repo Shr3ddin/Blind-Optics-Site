@@ -5,13 +5,21 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding-block: 1rem;
+	padding-block: .7rem;
 	background-color: rgba(0, 0, 0, 0.4);
 	border-block-end: 1px solid transparent;
-	// border-block-end: 1px solid hsla(0, 0%, 0%, 0.15);
-	// box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 	z-index: 2;
-	// transition: var(--transition-1);
+	transition: 300ms ease;
+
+	&--active {
+		background-color: rgba(0, 0, 0, 0.95);
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	}
+
+	&--hide {
+		transform: translateY(-100%);
+		transition-delay: 0.25s;
+	}
 
 	&__info-bar {
 		display: none;

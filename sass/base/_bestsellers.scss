@@ -1,0 +1,38 @@
+@use '../variables/variables' as *;
+
+.bestsellers {
+	&__subtitle {
+		text-align: center;
+		margin-block: 1.5rem;
+		font-size: $subtitle;
+		font-weight: 300;
+	}
+
+	&__card {
+		position: relative;
+		display: grid;
+		place-items: center;
+		padding: 0 3rem;
+
+		&::after {
+			position: absolute;
+			content: attr(data-bestseller);
+            top: 0;
+            right: 10%;
+            padding: .5rem;
+            background-color: $primary;
+            border-radius: 6px;
+            font-size: .7rem;
+            color: $white;
+
+		}
+
+		&-img {
+			padding: 1rem;
+		}
+
+		&-img img {
+			width: 100%;
+		}
+	}
+}
