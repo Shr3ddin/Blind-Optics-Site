@@ -4,31 +4,47 @@
 	&__subtitle {
 		text-align: center;
 		margin-block: 1.5rem;
+        color: $dark-grey;
 		font-size: $subtitle;
 		font-weight: 300;
 	}
 
-	&__card {
-		position: relative;
+	&__carousel {
 		display: grid;
 		place-items: center;
-		padding: 0 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 1rem;
+        margin-inline: 1rem;
+	}
+
+	&__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+		position: relative;
+		
+		min-width: 15rem;
+		padding: 2rem 1rem;
+		border: 1px solid hsla(0, 0%, 0%, 0.2);
+		border-radius: 6px;
 
 		&::after {
 			position: absolute;
 			content: attr(data-bestseller);
-            top: 0;
-            right: 10%;
-            padding: .5rem;
-            background-color: $primary;
-            border-radius: 6px;
-            font-size: .7rem;
-            color: $white;
-
+			top: 5px;
+			right: 5px;
+			padding: 0.5rem;
+			background-color: $primary;
+			border-radius: 6px;
+			font-size: 0.8rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: $white;
 		}
 
 		&-img {
-			padding: 1rem;
+			// padding: 1rem;
 		}
 
 		&-img img {

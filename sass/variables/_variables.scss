@@ -9,14 +9,15 @@ $primary: #4e64ff;
 $hover-color: #485ae6;
 $secondary: #01d5c4;
 $black: #0d1717;
-$white: #FFFAFA;
+$white: #F0F8FF;
 $white-transparency: hsl(208, 100%, 97%, 0.97);
 $light-grey: #C7C7C7;
+$dark-grey: #545454;
 $smoky-black: hsla(40, 12%, 5%, 1);
 
 // FONT SIZES
-$headline-1: calc(1.6rem + 1.5vw);
-$subtitle: calc(1rem + 1vw);
+$headline-1: calc(1.4rem + .8vw);
+$subtitle: calc(1rem + .7vw);
 
 // LETTER SPACING
 $letter-spacing-1: 1px;

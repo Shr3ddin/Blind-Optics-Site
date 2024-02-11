@@ -8,6 +8,7 @@
 html {
   scroll-behavior: smooth;
   min-height: 300vh;
+  scroll-padding-top: 40px;
 }
 
 body {
@@ -76,7 +77,7 @@ li {
   transform: scale(1.09);
 }
 .header__items .search-btn ion-icon {
-  color: #FFFAFA;
+  color: #F0F8FF;
   font-weight: bold;
 }
 .header .search-form {
@@ -109,22 +110,22 @@ li {
 
 .nav {
   position: fixed;
-  top: 95px;
+  top: 85px;
   bottom: 0;
   left: -430px;
   width: 100%;
+  visibility: hidden;
   max-width: 360px;
   padding-inline: 35px;
   padding-block: 20px;
   background-color: hsla(208, 100%, 97%, 0.97);
   overflow-y: auto;
-  visibility: hidden;
   z-index: 2;
   transition: 500ms ease;
 }
 .nav--active {
-  visibility: visible;
   transform: translateX(430px);
+  visibility: visible;
 }
 .nav__items {
   display: flex;
@@ -237,7 +238,7 @@ li {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #FFFAFA;
+  background-color: #F0F8FF;
 }
 
 .hamburger-box {
@@ -258,7 +259,7 @@ li {
 .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #FFFAFA;
+  background-color: #F0F8FF;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -318,7 +319,7 @@ li {
   position: relative;
   padding-block: 95px;
   min-height: 100vh;
-  color: #FFFAFA;
+  color: #F0F8FF;
   overflow: hidden;
   z-index: 1;
 }
@@ -393,7 +394,7 @@ li {
 
 .wrapper {
   margin-inline: auto;
-  max-width: 87.5rem;
+  max-width: 1200px;
   width: 100%;
 }
 
@@ -404,12 +405,12 @@ li {
 
 .section-title {
   font-family: "Montserrat", sans-serif;
-  font-size: calc(1.6rem + 1.5vw);
+  font-size: calc(1.4rem + 0.8vw);
 }
 
 .subtitle {
   text-transform: uppercase;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1rem + 0.7vw);
   letter-spacing: 2px;
 }
 
@@ -474,28 +475,40 @@ li {
 .bestsellers__subtitle {
   text-align: center;
   margin-block: 1.5rem;
-  font-size: calc(1rem + 1vw);
+  color: #545454;
+  font-size: calc(1rem + 0.7vw);
   font-weight: 300;
 }
-.bestsellers__card {
-  position: relative;
+.bestsellers__carousel {
   display: grid;
   place-items: center;
-  padding: 0 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin-inline: 1rem;
+}
+.bestsellers__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 15rem;
+  padding: 2rem 1rem;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  border-radius: 6px;
 }
 .bestsellers__card::after {
   position: absolute;
   content: attr(data-bestseller);
-  top: 0;
-  right: 10%;
+  top: 5px;
+  right: 5px;
   padding: 0.5rem;
   background-color: #4e64ff;
   border-radius: 6px;
-  font-size: 0.7rem;
-  color: #FFFAFA;
-}
-.bestsellers__card-img {
-  padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #F0F8FF;
 }
 .bestsellers__card-img img {
   width: 100%;
