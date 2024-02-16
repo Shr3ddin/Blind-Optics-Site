@@ -11,15 +11,6 @@ const searchForm = document.querySelector('.search-form');
 
 const sliderItems = document.querySelectorAll('.hero__item');
 
-const ctaBtn = document.querySelector('.hero__cta-btn');
-
-const ctaClicked = e => {
-	// e.preventDefault();
-	console.log('clicked');
-};
-
-ctaBtn.addEventListener('click', ctaClicked);
-
 let lastScrollYPos = 0;
 
 let currentSlide = sliderItems[0];

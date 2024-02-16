@@ -1,0 +1,21 @@
+@use '../variables/variables' as *;
+
+.discounts {
+	padding: 3rem 1.5rem;
+	background-color: $secondary;
+
+	&__title {
+		padding-block: 0.5rem;
+	}
+
+	&__btn {
+		@include button;
+		border: 1px solid transparent;
+		background-color: $black;
+		color: $white;
+
+		&:hover {
+			background-color: $primary;
+		}
+	}
+}

@@ -4,51 +4,86 @@
 	&__subtitle {
 		text-align: center;
 		margin-block: 1.5rem;
-        color: $dark-grey;
+		color: $dark-grey;
 		font-size: $subtitle;
 		font-weight: 300;
 	}
 
-	&__carousel {
-		display: grid;
-		place-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-        gap: 1rem;
-        margin-inline: 1rem;
-	}
+	// &__carousel {
+	// 	display: grid;
+	// 	place-items: center;
+	// 	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	// 	gap: 1rem;
+	// 	margin-inline: 1rem;
+	// }
 
 	&__card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		position: relative;
-		
-		min-width: 15rem;
+		min-width: min-content;
 		padding: 2rem 1rem;
-		border: 1px solid hsla(0, 0%, 0%, 0.2);
+		border: 1px solid hsla(0, 0%, 0%, 0.1);
 		border-radius: 6px;
+		transition: transform 300ms ease;
+
+		&:hover {
+			transform: scale(0.98);
+		}
 
 		&::after {
 			position: absolute;
 			content: attr(data-bestseller);
 			top: 5px;
 			right: 5px;
-			padding: 0.5rem;
+			padding: 0.2rem 0.5rem;
 			background-color: $primary;
 			border-radius: 6px;
-			font-size: 0.8rem;
+			font-size: 0.7rem;
 			font-weight: bold;
 			text-transform: uppercase;
 			color: $white;
 		}
 
-		&-img {
-			// padding: 1rem;
-		}
-
 		&-img img {
 			width: 100%;
+		}
+
+		&-content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			&-title {
+				font-size: 1.1rem;
+			}
+
+			&-model {
+				margin-block-end: 0.5rem;
+				font-size: 0.9rem;
+				color: $dark-grey;
+			}
+
+			&-regural-price {
+				font-size: 0.8rem;
+				text-decoration: line-through;
+				color: $dark-grey;
+			}
+
+			&-btn {
+                @include button;
+                background-color: transparent;
+				border: 1px solid $primary;
+				transition: background-color 300ms, color 300ms;
+
+				&:hover {
+					background-color: $primary;
+					color: $white;
+				}
+			}
 		}
 	}
 }

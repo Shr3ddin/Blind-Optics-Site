@@ -23,3 +23,12 @@ $subtitle: calc(1rem + .7vw);
 $letter-spacing-1: 1px;
 $letter-spacing-2: 2px;
 $letter-spacing-2: 2px;
+
+@mixin button {
+	margin-top: 1rem;
+	padding: 0.5rem 3rem;
+	border-radius: 6px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background-color 300ms, color 300ms;
+}
