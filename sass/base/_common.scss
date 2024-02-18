@@ -88,3 +88,12 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+
+@mixin button {
+	margin-top: 1rem;
+	padding: 0.5rem 3rem;
+	border-radius: 6px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background-color 300ms, color 300ms;
+}

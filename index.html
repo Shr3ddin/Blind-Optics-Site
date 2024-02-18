@@ -12,7 +12,7 @@
 	<title>Blind Optics | Your Vision, Our Passion</title>
 	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css" />
-	<script src="./js/script.js" defer></script>
+	<script type="module" src="./js/script.js"></script>
 </head>
 
 <body>
@@ -270,8 +270,8 @@
 									<img src="./img/frameSUN1.jpg" alt="Rayban frame" />
 								</div>
 								<div class="bestsellers__card-content">
-									<h3 class="bestsellers__card-content-title">Rayban</h3>
-									<p class="bestsellers__card-content-model">RB7047 5196</p>
+									<h3 class="bestsellers__card-content-title">Persol</h3>
+									<p class="bestsellers__card-content-model">PO3265S</p>
 									<p class="bestsellers__card-content-regural-price">$219.00</p>
 									<p class="new-price">$199.00</p>
 									<button class="bestsellers__card-content-btn">Select</button>
@@ -355,7 +355,7 @@
 
 		<section class="discounts text-center section" id="discounts">
 			<h3 class="discounts__subtitle subtitle">Our discounts</h3>
-			<h2 class="discounts__title">Buy beautiful frames at a special price</h2>
+			<h2 class="discounts__title section-title">Buy beautiful frames at a special price</h2>
 			<p class="discounts__text">
 				Discover a wide selection of stylish eyewear that combines quality with affordability.</p>
 			<a href="#"><button class="discounts__btn">Discover</button></a>
@@ -365,31 +365,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
 	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			var elms = document.getElementsByClassName('splide');
-
-			for (var i = 0; i < elms.length; i++) {
-				new Splide(elms[i], {
-					type: 'loop',
-					autoplay: true,
-					arrows: true,
-					pagination: false,
-					perPage: 4,
-					gap: '.7rem',
-					breakpoints: {
-						1024: {
-							perPage: 3,
-						},
-						640: {
-							perPage: 2,
-						},
-						480: {
-							perPage: 1,
-						},
-					}
-				}).mount();
-			}
-		});
+		
 	</script>
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
