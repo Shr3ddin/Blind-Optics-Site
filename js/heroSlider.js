@@ -1,7 +1,6 @@
 export const handleHeroSlider = () => {
 	const sliderItems = document.querySelectorAll('.hero__item');
-    
-    
+
 	let currentSlide = sliderItems[0];
 	let currensSlidePos = 0;
 

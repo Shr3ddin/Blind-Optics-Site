@@ -10,6 +10,9 @@ export const handleNav = () => {
 
 		if (nav.classList.contains('nav--active')) {
 			searchForm.classList.remove('search-form--active');
+			document.body.classList.add('no-scroll');
+		} else {
+			document.body.classList.remove('no-scroll');
 		}
 	};
 
@@ -18,8 +21,6 @@ export const handleNav = () => {
 			const activeDropdown = document.querySelector('.nav__dropdown--active');
 			const dropdownMenu = this.nextElementSibling;
 			const ionIcon = this.querySelector('ion-icon[name="add-outline"], ion-icon[name="remove-outline"]');
-
-			console.log(dropdownMenu);
 
 			if (activeDropdown && activeDropdown !== dropdownMenu) {
 				activeDropdown.classList.remove('nav__dropdown--active');

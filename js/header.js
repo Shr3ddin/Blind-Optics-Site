@@ -1,7 +1,5 @@
 export const handleHeader = () => {
 	const header = document.querySelector('.header');
-	const burgerBtn = document.querySelector('.hamburger');
-	const nav = document.querySelector('.nav');
 
 	let lastScrollYPos = 0;
 
@@ -15,11 +13,6 @@ export const handleHeader = () => {
 		}
 
 		lastScrollYPos = window.scrollY;
-
-		if (header.classList.contains('header--hide') && nav.classList.contains('nav--active')) {
-			nav.classList.remove('nav--active');
-			burgerBtn.classList.remove('is-active');
-		}
 	};
 
 	const openHeader = () => {
