@@ -79,13 +79,13 @@ li {
   transform: scale(1.09);
 }
 .header__items .search-btn ion-icon {
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   color: #ffffff;
   font-weight: bold;
 }
 .header .search-form {
   position: absolute;
-  top: -60%;
+  top: -100%;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -96,7 +96,7 @@ li {
 }
 .header .search-form--active {
   opacity: 1;
-  transform: translateY(225%) translateX(-50%);
+  transform: translateY(300%) translateX(-50%);
 }
 .header .search-form__input {
   width: 100%;
@@ -632,16 +632,16 @@ li {
   background-position: center;
 }
 .products__card:nth-child(1) .products__card-img {
-  background-image: url("../../img/products-bg1.jpg");
+  background-image: url("/img/products-bg1.jpg");
 }
 .products__card:nth-child(2) .products__card-img {
-  background-image: url("../../img/products-bg2.jpg");
+  background-image: url("/img/products-bg2.jpg");
 }
 .products__card:nth-child(3) .products__card-img {
-  background-image: url("../../img/products-bg3.jpg");
+  background-image: url("/img/products-bg3.jpg");
 }
 .products__card:nth-child(4) .products__card-img {
-  background-image: url("../../img/products-bg4.jpg");
+  background-image: url("/img/products-bg4.jpg");
 }
 .products__card-shadow {
   position: absolute;
