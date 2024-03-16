@@ -10,7 +10,7 @@
 	max-width: 360px;
 	padding-inline: 35px;
 	padding-block: 20px;
-	background-color: $white-transparency;
+	background-color: $white;
 	overflow-y: auto;
 	z-index: 2;
 	transition: 500ms ease;
@@ -91,10 +91,11 @@
 	&__dropdown {
 		// display: none;
 		max-height: 0;
-		visibility: hidden;
+		// visibility: hidden;
 		opacity: 0;
-		// overflow: hidden;
-		transition: opacity 300ms ease, max-height 300ms ease, visibility 300ms ease;
+		overflow: hidden;
+		transition: opacity 300ms ease, max-height 300ms ease, 
+		visibility 300ms ease;
 
 		&--active {
 			// display: block;

@@ -16,6 +16,7 @@ export const handleHeroSlider = () => {
 		} else {
 			currensSlidePos++;
 		}
+		
 		changeSlide();
 	};
 
@@ -25,6 +26,8 @@ export const handleHeroSlider = () => {
 		} else {
 			currensSlidePos--;
 		}
+
+		changeSlide();
 	};
 
 	const autoChangeSlide = () => {

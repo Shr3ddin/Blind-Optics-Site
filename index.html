@@ -16,6 +16,10 @@
 </head>
 
 <body>
+	<div class="info-bar">
+		<h2 class="info-bar__title">Enjoy a clear view of savings with our exclusive 30% discount on all eyeglass
+			frames.</h2>
+	</div>
 	<header class="header">
 		<div class="header__info-bar">
 			<h2 class="header__info-bar-heading">
@@ -36,7 +40,9 @@
 						<ion-icon name="add-outline"></ion-icon>
 					</a>
 					<ul class="nav__dropdown">
-						<li class="nav__dropdown-item"><a href="#">Man</a></li>
+						<li class="nav__dropdown-item">
+							<a href="#">Man</a>
+						</li>
 						<li class="nav__dropdown-item"><a href="#">Woman</a></li>
 						<li class="nav__dropdown-item"><a href="#">Unisex</a></li>
 						<li class="nav__dropdown-item"><a href="#">Kids</a></li>
@@ -80,10 +86,6 @@
 						<ion-icon name="heart-outline"></ion-icon>
 						<span>My selection</span>
 					</a>
-					<a href="#" class="nav__action my-cart">
-						<ion-icon name="cart-outline"></ion-icon>
-						<span>My cart (0)</span>
-					</a>
 				</div>
 
 				<div class="nav__logo-container"></div>
@@ -93,6 +95,16 @@
 				<ion-icon name="search-outline"></ion-icon>
 			</button>
 
+			<form class="search-form">
+				<input type="search" id="search-box" placeholder="Search here..." class="search-form__input" />
+				<label for="search-box" class="search-form__btn"><ion-icon name="search-outline"></ion-icon></label>
+			</form>
+
+			<a href="#" class="my-cart">
+				<ion-icon name="cart-outline"></ion-icon>
+				<span>My cart</span>
+			</a>
+
 			<button class="hamburger hamburger--spin" type="button">
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
@@ -100,10 +112,7 @@
 			</button>
 		</div>
 
-		<form class="search-form">
-			<input type="search" id="search-box" placeholder="Search here..." class="search-form__input" />
-			<label for="search-box" class="search-form__btn"><ion-icon name="search-outline"></ion-icon></label>
-		</form>
+	
 	</header>
 
 	<main>
@@ -359,6 +368,37 @@
 			<p class="discounts__text">
 				Discover a wide selection of stylish eyewear that combines quality with affordability.</p>
 			<a href="#"><button class="discounts__btn">Discover</button></a>
+		</section>
+
+		<section class="products section text-center wrapper" id="products">
+			<h2 class="products__title section-title">Check out our products</h2>
+			<div class="products__cards">
+				<div class="products__card">
+					<div class="products__card-img">
+						<div class="products__card-shadow"></div>
+						<p class="products__card-text">Eyeglasses</p>
+					</div>
+				</div>
+				<div class="products__card">
+					<div class="products__card-img">
+						<div class="products__card-shadow"></div>
+						<p class="products__card-text">Sunglasses</p>
+					</div>
+				</div>
+				<div class="products__card">
+					<div class="products__card-img">
+						<div class="products__card-shadow"></div>
+						<p class="products__card-text">Contact lenses</p>
+					</div>
+				</div>
+				<div class="products__card">
+					<div class="products__card-img">
+						<div class="products__card-shadow"></div>
+						<p class="products__card-text">Accessories</p>
+					</div>
+				</div>
+			</div>
+
 		</section>
 	</main>
 
